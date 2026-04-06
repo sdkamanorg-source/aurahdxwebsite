@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+header h1 span {
+  color: cyan;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 50px;
+}
+
+.status {
+  color: cyan;
+}
+
+.hero h2 {
+  font-size: 60px;
+}
+
+.hero h2 span {
+  background: linear-gradient(to right, cyan, purple);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.deploy {
+  background: cyan;
+  border: none;
+  padding: 10px 20px;
+}
+
+.community {
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 20px;
+}
+
+/* LOCATIONS */
+.locations {
+  padding: 50px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  padding: 50px;
+}
