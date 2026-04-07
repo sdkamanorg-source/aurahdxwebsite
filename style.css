@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: Arial;
-  background: #000;
+  background: black;
   color: white;
   overflow-x: hidden;
 }
@@ -23,41 +22,33 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 30px;
+  align-items: center;
+  padding: 15px 25px;
 }
 
 .logo {
-  font-size: 22px;
-  letter-spacing: 1px;
+  font-family: 'Anton', sans-serif;
+  font-size: 24px;
 }
 
 .logo span {
   color: cyan;
 }
 
-/* NAV */
-.nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+/* DISCORD BIG ICON */
+.discord-btn img {
+  height: 30px;
   transition: 0.3s;
 }
 
-.nav a:hover {
-  color: cyan;
-  text-shadow: 0 0 10px cyan;
-}
-
-.discord-icon {
-  height: 16px;
+.discord-btn img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px cyan);
 }
 
 /* HERO */
 .hero {
-  padding: 80px 20px;
+  padding: 70px 20px;
 }
 
 .status {
@@ -67,115 +58,78 @@ body {
 }
 
 .hero h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-top: 10px;
+  font-family: 'Anton', sans-serif;
 }
 
 .hero span {
   background: linear-gradient(90deg, cyan, purple);
   -webkit-background-clip: text;
   color: transparent;
-  text-shadow: 0 0 20px rgba(0,255,255,0.5);
 }
 
-/* TYPING */
 .typing {
   margin-top: 10px;
   color: #aaa;
   font-size: 14px;
 }
 
-/* 🔥 DEPLOY BUTTON (PREMIUM) */
+/* BUTTON */
 .deploy {
-  margin-top: 30px;
-  padding: 16px 40px;
-  border-radius: 50px;
+  margin-top: 25px;
+  padding: 15px 35px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, cyan, purple);
   border: none;
   font-weight: bold;
-  font-size: 14px;
   cursor: pointer;
-  background: linear-gradient(90deg, cyan, purple);
   transition: 0.4s;
-  position: relative;
-  overflow: hidden;
 }
 
-/* hover glow */
 .deploy:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 30px cyan, 0 0 60px purple;
+  box-shadow: 0 0 30px cyan;
 }
 
-/* shine animation */
-.deploy::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
-  top: 0;
-  left: -100%;
-  transition: 0.5s;
+/* LOCATION TITLE */
+.location-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.deploy:hover::before {
-  left: 100%;
-}
-
-/* LOCATIONS */
-.locations {
-  padding: 50px 20px;
-}
-
+/* CARDS */
 .cards {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-/* 🔥 PREMIUM CARD */
 .card {
   flex: 1;
-  min-width: 130px;
-  padding: 20px;
-  border-radius: 15px;
+  min-width: 120px;
+  padding: 18px;
+  border-radius: 12px;
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
+  border: 1px solid #222;
+  font-family: 'Cinzel', serif; /* COPPER STYLE */
+  font-size: 20px;
   transition: 0.4s;
-  position: relative;
-  overflow: hidden;
 }
 
-/* hover effect */
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 25px rgba(0,255,255,0.4);
-  border-color: cyan;
-}
-
-/* glow border animation */
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 15px;
-  border: 1px solid transparent;
-  transition: 0.4s;
-}
-
-.card:hover::after {
-  border: 1px solid cyan;
-  box-shadow: 0 0 15px cyan;
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px cyan;
 }
 
 .card span {
   display: block;
-  margin-top: 5px;
   font-size: 11px;
+  margin-top: 5px;
 }
 
-/* STATUS COLORS */
+/* COLORS */
 .active {
   color: #00ff88;
   font-weight: bold;
@@ -188,11 +142,6 @@ body {
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .cards {
-    flex-direction: column;
-  }
+  .hero h2 { font-size: 28px; }
+  .cards { flex-direction: column; }
 }
